@@ -1,0 +1,10 @@
+version: '3.8'
+services:  
+  jupyter:
+    image: "nerudista/polars-pandas:latest"
+    container_name: jupyter-container
+    user: root
+    ports:
+      - "8891:8888"
+    volumes:
+      - "./jupyter:/home/jovyan/work"
